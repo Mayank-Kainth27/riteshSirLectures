@@ -4,10 +4,10 @@
 #include<stdio.h>
 int main()
 {
-    int n,x,y,z,q,w;
+    int n,x;
     scanf("%d",&n);
-    y=((~n)>>31)&1;
-    x=((((n>>31)&1)|(((~n)>>31))^1));
-    printf("%d",y);
+    //y=((~n)>>31)&1;
+    x=(((n>>31)&1) | (((~n)+1)&1))^1;
+    printf("%d",x);
     return 0;
 }
